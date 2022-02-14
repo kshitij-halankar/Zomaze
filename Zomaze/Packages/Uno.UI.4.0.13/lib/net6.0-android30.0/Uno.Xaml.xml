@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Uno.Xaml</name>
+    </assembly>
+    <members>
+        <member name="F:Uno.Xaml.ParsedMarkupExtensionInfo.BindingMembersRegex">
+            <summary>
+            This regex returns the members of a binding expression which are separated 
+            by commas but keeps the commas inside the member value.
+            e.g. [Property], ConverterParameter='A', TargetNullValue='B', FallbackValue='C,D,E,F' returns
+            - [Property]
+            - ConverterParameter='A'
+            - TargetNullValue='B'
+            - FallbackValue='C,D,E,F'
+            </summary>
+        </member>
+    </members>
+</doc>
