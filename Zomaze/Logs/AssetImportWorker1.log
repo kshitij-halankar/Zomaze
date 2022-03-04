@@ -16,13 +16,13 @@ COMMAND LINE ARGUMENTS:
 -batchMode
 -noUpm
 -name
-AssetImportWorker0
+AssetImportWorker1
 -projectPath
 /Users/husainunia/ASE Project/Zomaze/Zomaze
 -logFile
-Logs/AssetImportWorker0.log
+Logs/AssetImportWorker1.log
 -srvPort
-55953
+49647
 Successfully changed project path to: /Users/husainunia/ASE Project/Zomaze/Zomaze
 /Users/husainunia/ASE Project/Zomaze/Zomaze
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -54,7 +54,7 @@ Successfully changed project path to: /Users/husainunia/ASE Project/Zomaze/Zomaz
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 211.66 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 124.23 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.2.11f1 (e50cafbb4399)
 [Subsystems] Discovering subsystems at path /Applications/Unity/Unity.app/Contents/Resources/UnitySubsystems
@@ -69,90 +69,90 @@ Initialize mono
 Mono path[0] = '/Applications/Unity/Unity.app/Contents/Managed'
 Mono path[1] = '/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
 Mono config path = '/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56720
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56340
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
-Registered in 0.003424 seconds.
+Registered in 0.002225 seconds.
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 141.89 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 109.14 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.890 seconds
+- Completed reload, in  1.306 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1891ms)
-		BeginReloadAssembly (654ms)
+	ReloadAssembly (1307ms)
+		BeginReloadAssembly (248ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (5ms)
-		EndReloadAssembly (985ms)
-			LoadAssemblies (629ms)
-			RebuildTransferFunctionScriptingTraits (9ms)
-			SetupTypeCache (218ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (917ms)
+			LoadAssemblies (251ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (286ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (77ms)
-			SetupLoadedEditorAssemblies (581ms)
+			RebuildScriptCaches (51ms)
+			SetupLoadedEditorAssemblies (480ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (27ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (142ms)
-				BeforeProcessingInitializeOnLoad (6ms)
-				ProcessInitializeOnLoadAttributes (320ms)
-				ProcessInitializeOnLoadMethodAttributes (85ms)
+				InitializePlatformSupportModulesInManaged (18ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (109ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (286ms)
+				ProcessInitializeOnLoadMethodAttributes (66ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.013231 seconds.
+Registered in 0.013167 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image /Users/husainunia/ASE Project/Zomaze/Zomaze/Library/PackageCache/com.unity.visualscripting@1.7.7/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image /Users/husainunia/ASE Project/Zomaze/Zomaze/Library/PackageCache/com.unity.visualscripting@1.7.7/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 107.68 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 98.42 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.683 seconds
+- Completed reload, in  1.822 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2686ms)
-		BeginReloadAssembly (204ms)
+	ReloadAssembly (1823ms)
+		BeginReloadAssembly (148ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (14ms)
+			DisableScriptedObjects (11ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (58ms)
-		EndReloadAssembly (2267ms)
-			LoadAssemblies (401ms)
+			CreateAndSetChildDomain (32ms)
+		EndReloadAssembly (1460ms)
+			LoadAssemblies (176ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (681ms)
-			ReleaseScriptCaches (3ms)
-			RebuildScriptCaches (99ms)
-			SetupLoadedEditorAssemblies (991ms)
+			SetupTypeCache (436ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (81ms)
+			SetupLoadedEditorAssemblies (698ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (27ms)
+				InitializePlatformSupportModulesInManaged (11ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (108ms)
-				BeforeProcessingInitializeOnLoad (122ms)
-				ProcessInitializeOnLoadAttributes (700ms)
-				ProcessInitializeOnLoadMethodAttributes (32ms)
+				RefreshPlugins (98ms)
+				BeforeProcessingInitializeOnLoad (95ms)
+				ProcessInitializeOnLoadAttributes (459ms)
+				ProcessInitializeOnLoadMethodAttributes (33ms)
 				AfterProcessingInitializeOnLoad (1ms)
-				EditorAssembliesLoaded (1ms)
+				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (6ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launching external process: /Applications/Unity/Unity.app/Contents/Tools/UnityShaderCompiler
-Launched and connected shader compiler UnityShaderCompiler after 0.78 seconds
-Refreshing native plugins compatible for Editor in 0.64 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler after 0.10 seconds
+Refreshing native plugins compatible for Editor in 0.72 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3406 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 47 unused Assets / (1.5 MB). Loaded Objects now: 3877.
-Memory consumption went from 253.3 MB to 251.8 MB.
-Total: 9.334447 ms (FindLiveObjects: 0.869361 ms CreateObjectMapping: 0.474554 ms MarkObjects: 7.032504 ms  DeleteObjects: 0.956552 ms)
+Memory consumption went from 254.0 MB to 252.5 MB.
+Total: 5.982291 ms (FindLiveObjects: 0.425074 ms CreateObjectMapping: 0.283068 ms MarkObjects: 4.737628 ms  DeleteObjects: 0.535316 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -166,25 +166,13 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 63914.093179 seconds.
-  path: Assets/Levels/NewBrush.brush
-  artifactKey: Guid(e5275a519371a471da6ce982c3d051d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Levels/NewBrush.brush using Guid(e5275a519371a471da6ce982c3d051d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b0a0ae3e3acd7469345ceae26ec63f6') in 1.798785 seconds 
+  Time since last request: 3682.505628 seconds.
+  path: Assets/New Terrain 2.asset
+  artifactKey: Guid(fa5db34ee79e94ef0be6ed33b22ea746) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New Terrain 2.asset using Guid(fa5db34ee79e94ef0be6ed33b22ea746) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f88ca86d1b5c15af0538b7a96c8b431') in 1.324235 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 48.842745 seconds.
-  path: Assets/Levels/Level2
-  artifactKey: Guid(468c25c4f37f043fe8add271eb28bb3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Levels/Level2 using Guid(468c25c4f37f043fe8add271eb28bb3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5bf76205c21e9c11706cfd4565b306e') in 0.001140 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.164043 seconds.
-  path: Assets/Levels/Level2/Level3.unity
-  artifactKey: Guid(56d75a2ae50874e7cace2774a69cbb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Levels/Level2/Level3.unity using Guid(56d75a2ae50874e7cace2774a69cbb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68a94346f33c0f9f8ae18ec3e12fccb0') in 0.007842 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 3.403473 seconds.
-  path: Assets/Levels/Level2/Level2.unity
-  artifactKey: Guid(56d75a2ae50874e7cace2774a69cbb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Levels/Level2/Level2.unity using Guid(56d75a2ae50874e7cace2774a69cbb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fb5abf532d57f5037e8e3460a88d3aa') in 0.002712 seconds 
+  Time since last request: 0.000164 seconds.
+  path: Assets/New Terrain 3.asset
+  artifactKey: Guid(667072c9e91e044e18114275efdcad99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New Terrain 3.asset using Guid(667072c9e91e044e18114275efdcad99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e883fb2d68f15398b237e9537612e22') in 0.031129 seconds 
