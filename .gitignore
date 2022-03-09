@@ -13,6 +13,9 @@ sysinfo.txt
 # Unity3D generated meta files
 *.pidb.meta
 
+Zomaze/Logs/*
+Zomaze/UserSettings/*
+
 ###
 # VS/MD solution and project files
 ###
