@@ -26,8 +26,8 @@ public class PlayerController : MonoBehaviour
         applyAccelerometerMovement();
 
         //Rotation Via Gyrometer.
-        ApplyGyroRotation();
-        ApplyCalibration();
+        applyGyroRotation();
+        applyCalibration();
 
         transform.rotation = Quaternion.Slerp(transform.rotation, _rawGyroRotation.rotation, _smoothing);
     }
@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
         _smoothing = _tempSmoothing;
     }
 
-    private void ApplyGyroRotation()
+    private void applyGyroRotation()
     {
         _rawGyroRotation.rotation = Input.gyro.attitude;
         _rawGyroRotation.Rotate(0f, 0f, 180f, Space.Self);
@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour
         _appliedGyroYAngle = _rawGyroRotation.eulerAngles.y;
     }
 
-    private void ApplyCalibration()
+    private void applyCalibration()
     {
         _rawGyroRotation.Rotate(0f, -_calibrationYAngle, 0f, Space.World);
     }
