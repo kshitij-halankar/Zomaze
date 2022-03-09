@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
   [SerializeField] private float speed = 10.0f;
   private float rootSpeed = 90f;
   private Vector3 moveDirection = Vector3.zero;
+  private var distance = 0;
   [SerializeField] private CharacterController controller;
 
   //Rotation via Gyrometer.
@@ -72,7 +73,7 @@ public class PlayerController : MonoBehaviour
 
     if (Input.acceleration.z > 0.05)
     {
-      speed = 10.0f;
+      speed = 5.0f;
     }
     else if (Input.acceleration.z < -0.3)
     {
@@ -84,9 +85,16 @@ public class PlayerController : MonoBehaviour
 
       Vector3 movement = transform.TransformDirection(move);
 
+      distance += speed * Time.deltaTime;
+
+      if (distance > 4)
+      {
+        GetComponent<AudioSource>().Play();
+        distance = 0;
+      }
       // Move object
       controller.Move(movement);
-      GetComponent<AudioSource>().Play();
+
     }
 
     // Code not working - Need to change
