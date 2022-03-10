@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
   [SerializeField] private float speed = 10.0f;
   private float rootSpeed = 90f;
   private Vector3 moveDirection = Vector3.zero;
-  private var distance = 0;
+  private float distance = 0;
   [SerializeField] private CharacterController controller;
 
   //Rotation via Gyrometer.
