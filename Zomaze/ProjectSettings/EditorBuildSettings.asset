@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 0
+    path: Assets/movement_sound.unity
+    guid: 8926c8c9564b644e5be2e4ba28616f3c
   m_configObjects: {}
