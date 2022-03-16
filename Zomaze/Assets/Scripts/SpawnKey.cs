@@ -11,6 +11,7 @@ public class SpawnKey : MonoBehaviour
     private Vector3[] levelSize = new Vector3[5];
     private Vector3[] levelCenter = new Vector3[5];
     public float spawnCollisionRadiusCheck;
+    private Vector3 pos;
 
     // Start is called before the first frame update
     void Start()
@@ -66,11 +67,10 @@ public class SpawnKey : MonoBehaviour
 
     public void SpawnKeyObject()
     {
-       
         spawnCollisionRadiusCheck = 0.5f;
         var breakCondition = 0;
         while(breakCondition < 1000){
-            Vector3 pos = center + new Vector3(Random.Range(-size.x/2, size.x/2), 0, Random.Range(-size.z/2, size.z/2));
+            pos = center + new Vector3(Random.Range(-size.x/2, size.x/2), 0, Random.Range(-size.z/2, size.z/2));
             breakCondition = breakCondition+1;
             if(!Physics.CheckSphere(pos, spawnCollisionRadiusCheck))
             {
@@ -78,7 +78,9 @@ public class SpawnKey : MonoBehaviour
                 break;
             }
         }
-        Instantiate(keyPrefab, pos, Quaternion.identity);
+        if(breakCondition == 1000){
+            Instantiate(keyPrefab, pos, Quaternion.identity);
+        }
 
     }
 
