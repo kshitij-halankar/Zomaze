@@ -79,7 +79,9 @@ public class SpawnKey : MonoBehaviour
                 break;
             }
         }
-        Instantiate(keyPrefab, pos, Quaternion.identity);
+        if(breakCondition == 1000){
+            Instantiate(keyPrefab, pos, Quaternion.identity);
+        }
 
     }
 

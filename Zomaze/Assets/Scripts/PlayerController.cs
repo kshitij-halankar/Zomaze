@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
   private IEnumerator Start()
   {
     Input.gyro.enabled = true;
-    Application.targetFrameRate = 60;
+    //Application.targetFrameRate = 30;
     _initialYAngle = transform.eulerAngles.y;
 
     _rawGyroRotation = new GameObject("GyroRaw").transform;
