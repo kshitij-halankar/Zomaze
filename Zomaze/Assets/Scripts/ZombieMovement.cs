@@ -44,4 +44,8 @@ public class ZombieMovement : MonoBehaviour
         }
     }
 
+    public Vector3 GetZombiePosition(){
+        return transform.position;
+    }
+
 }
