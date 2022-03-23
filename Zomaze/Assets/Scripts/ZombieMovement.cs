@@ -38,9 +38,9 @@ public class ZombieMovement : MonoBehaviour
             moveDirection *= -1;
         }
 
-        if (Vector3.Distance(transform.position, currentTarget) < 0.5)
+        if (Vector3.Distance(transform.position, currentTarget) < 0.01)
         {
-            transform.Rotate(new Vector3(0, currentRotation, 0) * Time.deltaTime * 2);
+            transform.Rotate(new Vector3(0, currentRotation, 0));
         }
     }
 
