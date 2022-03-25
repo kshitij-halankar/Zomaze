@@ -12,15 +12,15 @@ public class GameTime : MonoBehaviour
     private float currentTime = 0f;
     [SerializeField] private float startingTime;
     private TimeSpan timePlaying;
-    [SerializeField] TextMeshProUGUI gameTimerPro;
+    [SerializeField] TextMeshProUGUI gameTime;
     bool isGameOver = false;
 
     // Start is called before the first frame update
     void Start()
     {
         currentTime = startingTime;
-        gameTimerPro.color = Color.green;
-        gameTimerPro.text = "00:00";
+        gameTime.color = Color.green;
+        gameTime.text = "00:00";
     }
 
     // Update is called once per frame
@@ -31,12 +31,12 @@ public class GameTime : MonoBehaviour
         //print(currentTime);
         if (currentTime < 20)
         {
-            gameTimerPro.color = Color.red;
+            gameTime.color = Color.red;
         } else
         {
-            gameTimerPro.color = Color.green;
+            gameTime.color = Color.green;
         }
-        gameTimerPro.text = timePlaying.ToString("mm':'ss");
+        gameTime.text = timePlaying.ToString("mm':'ss");
 
         if (currentTime <= 0)
         {
@@ -51,5 +51,13 @@ public class GameTime : MonoBehaviour
     public void GameOver()
     {
         gameOverScreen.Setup(10);
+    }
+
+    public float getCurrentTime(){
+        return currentTime;
+    }
+
+    public float getStartingTime(){
+        return startingTime;
     }
 }
