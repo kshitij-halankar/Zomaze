@@ -84,8 +84,8 @@ public class PlayerController : MonoBehaviour
       Vector3 move = new Vector3(0, 0, -Input.acceleration.z * speed * Time.deltaTime);
 
       Vector3 movement = transform.TransformDirection(move);
-        // Move object
-      
+      // Move object
+
 
       distance += speed * Time.deltaTime;
 
