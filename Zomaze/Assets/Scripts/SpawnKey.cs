@@ -6,11 +6,13 @@ using UnityEngine.SceneManagement;
 public class SpawnKey : MonoBehaviour
 {
     public GameObject keyPrefab;
+    public GameObject spawnedKey;
     public Vector3 center;
     public Vector3 size;
     private Vector3[] levelSize = new Vector3[5];
     private Vector3[] levelCenter = new Vector3[5];
     public float spawnCollisionRadiusCheck;
+    public CalculateScore calculateScore;
 
     // Start is called before the first frame update
     void Start()
@@ -75,14 +77,25 @@ public class SpawnKey : MonoBehaviour
             breakCondition = breakCondition+1;
             if(!Physics.CheckSphere(pos, spawnCollisionRadiusCheck))
             {
-                Instantiate(keyPrefab, pos, Quaternion.identity);
+                spawnedKey = Instantiate(keyPrefab, pos, Quaternion.identity);
+                transform.position = pos;
                 break;
             }
         }
         if(breakCondition == 1000){
-            Instantiate(keyPrefab, pos, Quaternion.identity);
+            spawnedKey = Instantiate(keyPrefab, pos, Quaternion.identity);
+            transform.position = pos;
         }
 
+    }
+
+    private void OnTriggerEnter(Collider collidingObject){
+        if(collidingObject.gameObject.name == "Player"){
+            calculateScore.keyCollected();
+            Destroy(spawnedKey);
+            Destroy(this.gameObject);
+        }
+        
     }
 
     void OnDrawGizmosSelected()

@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+  [SerializeField] CalculateScore calculateScore;
+
   //Movement
   [SerializeField] private float speed = 10.0f;
   private float rootSpeed = 90f;
@@ -31,6 +34,13 @@ public class PlayerController : MonoBehaviour
     ApplyCalibration();
 
     transform.rotation = Quaternion.Slerp(transform.rotation, _rawGyroRotation.rotation, _smoothing);
+
+    if(SceneManager.GetActiveScene().name == "Level3"){
+      if(transform.position.z >= 33){
+        calculateScore.mazeExited();
+        enabled = false;
+      }
+    }
   }
 
   private IEnumerator Start()
