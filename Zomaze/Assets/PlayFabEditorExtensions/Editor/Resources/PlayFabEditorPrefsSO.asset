@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: PlayFabEditorPrefsSO
   m_EditorClassIdentifier: 
   DevAccountEmail: gulegul@uwindsor.ca
-  DevAccountToken: 4uak439p3jrzhbdjgx3jq6bipa6y95eogmgn1xmuqmjcwnx5orgko7gtdygxakfyg3z1hxwo5w78kfysdjg4gh3m4tj454ut5uay3mwqxnzj7oen7rc8co5f8x4hhkafr7oowzfaydo73d8bpek77paxztx6e5fkhafphw3mdzm1fumcnbety61cwsueuemj5qfiqjq3
-  SelectedStudio: Zomaze Studio
+  DevAccountToken: uysd9mdgc5fj6ow5n6st46n43skxhdusk4f8rtbffwskfszuhm1jnhiz67ggd4kjt5tzho377r16nz3b38j3tqoifeeptx3q7cp73qstb5q99i7p9b5p4wwa6x9yq1rqz47mwhc5eshckqho5b7oj3spou98bdgugugzhrhhzgimuos8o8tf9sj85igc1y61taz934yz
+  SelectedStudio: 
   SdkPath: Assets/PlayFabSDK
   EdExPath: 
   LocalCloudScriptPath: 
   PanelIsShown: 0
-  curMainMenuIdx: 1
+  curMainMenuIdx: 0
   curSubMenuIdx: 0

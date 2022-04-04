@@ -13,6 +13,8 @@ public class LoginScript : MonoBehaviour
     public TMP_InputField email;
     public TMP_InputField userPassword;
 
+    //public UploadScore uploadScore;
+
     //public GameObject userName, userEmail, userPassword;
     string encryptedPassword;
 
@@ -39,6 +41,8 @@ public class LoginScript : MonoBehaviour
     {
         Debug.Log("User Logged In");
         SceneManager.LoadScene("Level1");
+        //updateScore(2);
+
     }
 
     public void OnLoginFailure(PlayFabError error)
@@ -58,5 +62,48 @@ public class LoginScript : MonoBehaviour
             s.Append(b.ToString("x2").ToLower());
         }
         return s.ToString();
+    }
+
+    public void updateScore(int score) {
+        Debug.Log("Updating Score");
+        var request = new UpdatePlayerStatisticsRequest {
+            Statistics = new List<StatisticUpdate>
+            {
+                new StatisticUpdate
+                {
+                    StatisticName = "HighScore",
+                    Value = score
+                }
+            }
+        };
+        PlayFabClientAPI.UpdatePlayerStatistics(request, OnLeaderboardUpdate, OnError);
+    }
+
+    public void OnLeaderboardUpdate(UpdatePlayerStatisticsResult result) {
+        Debug.Log("Score Updated");
+    }
+
+    public void OnError(PlayFabError error) {
+        Debug.Log("Score Update Fail");
+    }
+
+    public void GoToSignUpPage() {
+        SceneManager.LoadScene("SignupPage");
+    }
+
+    public void GetLeaderBoard() {
+        var request = new GetLeaderboardRequest {
+            StatisticName = "HighScore",
+            StartPosition = 0,
+            MaxResultsCount = 5
+        };
+
+        PlayFabClientAPI.GetLeaderboard(request, OnLeaderboardGet, OnError);
+
+
+    }
+
+    void OnLeaderboardGet(GetLeaderboardResult result) {
+
     }
 }
