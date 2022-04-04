@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 
@@ -37,6 +38,7 @@ public class SignUpScript : MonoBehaviour
     public void OnRegisterRequestSuccess(RegisterPlayFabUserResult result)
     {
         Debug.Log("User Registered");
+        SceneManager.LoadScene("LoginPage");
     }
 
     public void OnRegisterFailure(PlayFabError error)
@@ -56,5 +58,9 @@ public class SignUpScript : MonoBehaviour
             s.Append(b.ToString("x2").ToLower());
         }
         return s.ToString();
+    }
+
+    public void GoToLoginPage() {
+        SceneManager.LoadScene("LoginPage");
     }
 }
