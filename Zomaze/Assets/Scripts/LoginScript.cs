@@ -13,10 +13,24 @@ public class LoginScript : MonoBehaviour
     public TMP_InputField email;
     public TMP_InputField userPassword;
 
+    [SerializeField] TextMeshProUGUI Row1;
+    [SerializeField] TextMeshProUGUI Row2;
+    [SerializeField] TextMeshProUGUI Row3;
+    [SerializeField] TextMeshProUGUI Row4;
+    [SerializeField] TextMeshProUGUI Row5;
+
     //public UploadScore uploadScore;
 
     //public GameObject userName, userEmail, userPassword;
     string encryptedPassword;
+
+    public void Start() {
+        Debug.Log("Script starting");
+        if (SceneManager.GetActiveScene().name == "LeaderBoard") {
+            Debug.Log("getting leaderboard");
+            GetLeaderBoard();
+        }
+    }
 
     public void Login()
     {
@@ -40,7 +54,7 @@ public class LoginScript : MonoBehaviour
     public void OnLoginSuccess(LoginResult result)
     {
         Debug.Log("User Logged In");
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("MainMenu");
         //updateScore(2);
 
     }
@@ -99,11 +113,14 @@ public class LoginScript : MonoBehaviour
         };
 
         PlayFabClientAPI.GetLeaderboard(request, OnLeaderboardGet, OnError);
-
-
     }
 
     void OnLeaderboardGet(GetLeaderboardResult result) {
 
+        Debug.Log("Leaderboard accessed");
+
+        foreach(var item in result.Leaderboard) {
+            Row1.text = "  1\t" + item.DisplayName + "\t" + item.StatValue;
+        }
     }
 }
