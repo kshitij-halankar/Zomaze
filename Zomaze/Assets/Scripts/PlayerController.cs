@@ -7,8 +7,10 @@ public class PlayerController : MonoBehaviour
 {
   [SerializeField] CalculateScore calculateScore;
 
-  //Movement
-  [SerializeField] private float speed = 10.0f;
+    public GameEndScreen gameEnd;
+
+    //Movement
+    [SerializeField] private float speed = 10.0f;
   private float rootSpeed = 90f;
   private Vector3 moveDirection = Vector3.zero;
   private float distance = 0;
@@ -35,12 +37,16 @@ public class PlayerController : MonoBehaviour
 
     transform.rotation = Quaternion.Slerp(transform.rotation, _rawGyroRotation.rotation, _smoothing);
 
-    if(SceneManager.GetActiveScene().name == "Level3"){
-      if(transform.position.z >= 33){
+    //if(SceneManager.GetActiveScene().name == "Level1"){
+    if (transform.position.z <= 8) {
         calculateScore.mazeExited();
         enabled = false;
-      }
+        SceneManager.LoadScene("GameExit");
+                //gameEnd.Setup
+                gameEnd.Setup(calculateScore.getScore());
+
     }
+    //}
   }
 
   private IEnumerator Start()

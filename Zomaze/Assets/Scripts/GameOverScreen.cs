@@ -8,15 +8,18 @@ using UnityEngine.SceneManagement;
 public class GameOverScreen : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI scoreText;
-    public void Setup(int score)
+    private string currentScene;
+    public void Setup(int score, string scene)
     {
-        gameObject.SetActive(true);
+        currentScene = scene;
+        //gameObject.SetActive(true);
+        SceneManager.LoadScene("GameOver");
         scoreText.text = "SCORE: " + score.ToString() + " POINTS";
     }
 
     public void RestartButton()
     {
-        SceneManager.LoadScene("Level3");
+        SceneManager.LoadScene(currentScene);
     }
     public void MainMenuButton()
     {

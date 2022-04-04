@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameTime : MonoBehaviour
 {
@@ -50,7 +51,9 @@ public class GameTime : MonoBehaviour
     }
     public void GameOver()
     {
-        gameOverScreen.Setup(10);
+        Scene currentScene = SceneManager.GetActiveScene();
+        //SceneManager.LoadScene(gameOverScene);
+        gameOverScreen.Setup(10, currentScene.name);
     }
 
     public float getCurrentTime(){
