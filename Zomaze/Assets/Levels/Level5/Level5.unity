@@ -12174,6 +12174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   calculateScore: {fileID: 0}
+  exitDistance: 44
   speed: 1
   controller: {fileID: 1734270018}
 --- !u!143 &1734270018
@@ -12266,7 +12267,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1734270016}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 27.89, y: 1.35, z: 5.15}
+  m_LocalPosition: {x: 27.89, y: 1.35, z: 42.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
