@@ -6,6 +6,7 @@ using System;
 
 public class ZombieUserInteraction : MonoBehaviour
 {
+    [SerializeField] CalculateScore score;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,14 +29,14 @@ public class ZombieUserInteraction : MonoBehaviour
             if(Math.Abs(playerPosition.x - zombiePosition.x) < 4 && Math.Abs(playerPosition.z - zombiePosition.z) < 4){
                 Scene currentScene = SceneManager.GetActiveScene();
                 //SceneManager.LoadScene(gameOverScene);
-                GameOverScreen.Setup(10, currentScene.name);
+                GameOverScreen.SetupGameOver(score.getScore(), currentScene.name);
             }
             }
         else{
             if(Math.Abs(playerPosition.z - zombiePosition.z) < 1 && Math.Abs(playerPosition.x - zombiePosition.x) < 1){
                 Scene currentScene = SceneManager.GetActiveScene();
                 //SceneManager.LoadScene(gameOverScene);
-                GameOverScreen.Setup(10, currentScene.name);
+                GameOverScreen.SetupGameOver(score.getScore(), currentScene.name);
             }
         }
     }
