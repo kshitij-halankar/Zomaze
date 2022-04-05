@@ -23,4 +23,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 5840a88c10803514eb6f2ce91148b3cb
+  - enabled: 1
+    path: Assets/Scenes/LevelSelector.unity
+    guid: 06a8d5c1f0df00c469645d2ee982b85d
+  - enabled: 1
+    path: Assets/Levels/Level2/Level2.unity
+    guid: 56d75a2ae50874e7cace2774a69cbb04
+  - enabled: 1
+    path: Assets/Levels/Level3/Level3.unity
+    guid: 5fe667544c4ae5549a7c414ad57d6905
+  - enabled: 1
+    path: Assets/Levels/Level4/MazeLevel4.unity
+    guid: 51ecd20fb51d1454f9be9e7bcc290bba
+  - enabled: 1
+    path: Assets/Levels/Level5/Level5.unity
+    guid: 769f5a144cf16c44592a1b015afdee02
   m_configObjects: {}
