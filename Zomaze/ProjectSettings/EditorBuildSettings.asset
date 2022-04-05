@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/SignupPage.unity
+    guid: cd7210b5c718d464a88ec63618296750
+  - enabled: 1
     path: Assets/MainMenu/MainMenu.unity
     guid: 320342be46b014e3399aee7ba1521447
   - enabled: 1
@@ -26,9 +29,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 5840a88c10803514eb6f2ce91148b3cb
-  - enabled: 1
-    path: Assets/Scenes/SignupPage.unity
-    guid: cd7210b5c718d464a88ec63618296750
   - enabled: 1
     path: Assets/Scenes/LoginPage.unity
     guid: a4588564a38ec475c9779e2798b1b2ec
