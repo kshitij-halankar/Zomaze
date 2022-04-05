@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] CalculateScore calculateScore;
-    [SerializeField] float exitDistance;
+    [SerializeField] float exitDistance1;
+    [SerializeField] float exitDistance2;
     private GameEndScreen gameEnd;
 
     //Movement
@@ -37,12 +38,9 @@ public class PlayerController : MonoBehaviour
 
         transform.rotation = Quaternion.Slerp(transform.rotation, _rawGyroRotation.rotation, _smoothing);
 
-        //if(SceneManager.GetActiveScene().name == "Level1"){
-        if (transform.position.z == exitDistance)
-        //|| (exitDistance > 0 && transform.position.z <= exitDistance) 
-        //|| (exitDistance < 0 && transform.position.z >= exitDistance))
+        if (transform.position.z >= exitDistance1 && transform.position.z <= exitDistance2)
         {
-            calculateScore.mazeExited();
+            //calculateScore.mazeExited();
             enabled = false;
             SceneManager.LoadScene("GameExit");
             //gameEnd.Setup
