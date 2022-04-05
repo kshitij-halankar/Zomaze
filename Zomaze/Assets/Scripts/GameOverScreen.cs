@@ -7,9 +7,9 @@ using UnityEngine.SceneManagement;
 
 public class GameOverScreen : MonoBehaviour
 {
-    private static TextMeshProUGUI scoreText;
     private static string currentScene;
     public static GameOverScreen instance;
+    public static float finalScore;
 
     public void Awake()
     {
@@ -18,10 +18,10 @@ public class GameOverScreen : MonoBehaviour
     }
     public static void Setup(int score, string scene)
     {
+        finalScore = score;
         currentScene = scene;
         //gameObject.SetActive(true);
         SceneManager.LoadScene("GameOver");
-        scoreText.text = "SCORE: " + score.ToString() + " POINTS";
     }
 
     public void RestartButton()

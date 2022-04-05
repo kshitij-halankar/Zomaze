@@ -2226,7 +2226,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430818615}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 31.84, y: 1.269, z: 13.82}
+  m_LocalPosition: {x: 31.84, y: 1.269, z: 14.39}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2342,6 +2342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 879c2e4725abe7641b4687aa32d42ca4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: {fileID: 1995976961}
 --- !u!1 &440673789
 GameObject:
   m_ObjectHideFlags: 0
@@ -3266,7 +3267,6 @@ GameObject:
   - component: {fileID: 638485046}
   - component: {fileID: 638485049}
   - component: {fileID: 638485048}
-  - component: {fileID: 638485047}
   m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
@@ -3294,21 +3294,6 @@ RectTransform:
   m_AnchoredPosition: {x: -100, y: -40}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &638485047
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 638485045}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f295191ae1a31c34982c292b5bfd2445, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 638485048}
-  gameTime: {fileID: 1995976962}
-  hintButton: {fileID: 663087527}
 --- !u!114 &638485048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4824,7 +4809,7 @@ MonoBehaviour:
   center: {x: 22, y: 0, z: 20.5}
   size: {x: 22, y: 1, z: 21.5}
   spawnCollisionRadiusCheck: 0.25
-  calculateScore: {fileID: 638485047}
+  calculateScore: {fileID: 1995976961}
 --- !u!4 &979502978
 Transform:
   m_ObjectHideFlags: 0
@@ -9104,7 +9089,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b64cf89a0a4e1e47b472c839298667d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingTime: 10
+  startingTime: 100
   gameTime: {fileID: 21492776}
 --- !u!1 &2011907049
 GameObject:

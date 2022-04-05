@@ -23,7 +23,6 @@ public class CalculateScore : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scoreText.text = "Score:" + score.ToString();
        
     }
 
@@ -39,10 +38,12 @@ public class CalculateScore : MonoBehaviour
         else{
             score = score + 100;
         }
+        scoreText.text = "Score:" + score.ToString();
     }
 
     public void mazeExited(){
         score = score + ((int)gameTime.getCurrentTime()*20);
+        scoreText.text = "Score:" + score.ToString();
     }
 
     public int getScore(){
@@ -54,6 +55,7 @@ public class CalculateScore : MonoBehaviour
             hintButton.GetComponent<Image>().color = Color.red;
             hintUsed = true;
             score = score - 200;
+            scoreText.text = "Score:" + score.ToString();
         }
 	}
 
