@@ -32,4 +32,8 @@ public class GameOverScreen : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+    public void LevelsButton()
+    {
+        SceneManager.LoadScene("LevelSelector");
+    }
 }

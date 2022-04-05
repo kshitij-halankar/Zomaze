@@ -38,7 +38,9 @@ public class PlayerController : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, _rawGyroRotation.rotation, _smoothing);
 
         //if(SceneManager.GetActiveScene().name == "Level1"){
-        if (transform.position.z <= exitDistance)
+        if (transform.position.z == exitDistance)
+        //|| (exitDistance > 0 && transform.position.z <= exitDistance) 
+        //|| (exitDistance < 0 && transform.position.z >= exitDistance))
         {
             calculateScore.mazeExited();
             enabled = false;
@@ -47,6 +49,7 @@ public class PlayerController : MonoBehaviour
             gameEnd.Setup(calculateScore.getScore());
 
         }
+
         //}
     }
 
