@@ -13,11 +13,21 @@ public class LoginScript : MonoBehaviour
     public TMP_InputField email;
     public TMP_InputField userPassword;
 
-    [SerializeField] TextMeshProUGUI Row1;
-    [SerializeField] TextMeshProUGUI Row2;
-    [SerializeField] TextMeshProUGUI Row3;
-    [SerializeField] TextMeshProUGUI Row4;
-    [SerializeField] TextMeshProUGUI Row5;
+    [SerializeField] TextMeshProUGUI Row1rank;
+    [SerializeField] TextMeshProUGUI Row2rank;
+    [SerializeField] TextMeshProUGUI Row3rank;
+    [SerializeField] TextMeshProUGUI Row4rank;
+    [SerializeField] TextMeshProUGUI Row5rank;
+    [SerializeField] TextMeshProUGUI Row1UN;
+    [SerializeField] TextMeshProUGUI Row2UN;
+    [SerializeField] TextMeshProUGUI Row3UN;
+    [SerializeField] TextMeshProUGUI Row4UN;
+    [SerializeField] TextMeshProUGUI Row5UN;
+    [SerializeField] TextMeshProUGUI Row1Score;
+    [SerializeField] TextMeshProUGUI Row2Score;
+    [SerializeField] TextMeshProUGUI Row3Score;
+    [SerializeField] TextMeshProUGUI Row4Score;
+    [SerializeField] TextMeshProUGUI Row5Score;
 
     //public UploadScore uploadScore;
 
@@ -25,6 +35,7 @@ public class LoginScript : MonoBehaviour
     string encryptedPassword;
 
     public void Start() {
+        updateScore(25);
         Debug.Log("Script starting");
         if (SceneManager.GetActiveScene().name == "LeaderBoard") {
             Debug.Log("getting leaderboard");
@@ -116,11 +127,41 @@ public class LoginScript : MonoBehaviour
     }
 
     void OnLeaderboardGet(GetLeaderboardResult result) {
-
+        int i = 1;
         Debug.Log("Leaderboard accessed");
+        //Row1.text = "abcd";
 
-        foreach(var item in result.Leaderboard) {
-            Row1.text = "  1\t" + item.DisplayName + "\t" + item.StatValue;
+        Row1rank.text = "1";
+        Row2rank.text = "2";
+        Row3rank.text = "3";
+        Row4rank.text = "4";
+        Row5rank.text = "5";
+
+        foreach (var item in result.Leaderboard) {
+            switch (i) {
+                case 1:
+                    Row1UN.text = item.DisplayName;
+                    Row1Score.text = item.StatValue.ToString();
+                    break;
+                case 2:
+                    Row2UN.text = item.DisplayName;
+                    Row2Score.text = item.StatValue.ToString();
+                    break;
+                case 3:
+                    Row3UN.text = item.DisplayName;
+                    Row3Score.text = item.StatValue.ToString();
+                    break;
+                case 4:
+                    Row4UN.text = item.DisplayName;
+                    Row4Score.text = item.StatValue.ToString();
+                    break;
+                case 5:
+                    Row5UN.text = item.DisplayName;
+                    Row5Score.text = item.StatValue.ToString();
+                    break;
+
+            }
+            i++;
         }
     }
 }

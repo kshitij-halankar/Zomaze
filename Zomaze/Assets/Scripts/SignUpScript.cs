@@ -22,7 +22,8 @@ public class SignUpScript : MonoBehaviour
         {
             Username = userName.text,
             Email = userEmail.text,
-            Password = Encrypt(userPassword.text)
+            Password = Encrypt(userPassword.text),
+            DisplayName = userName.text
         };
 
         PlayFabClientAPI.RegisterPlayFabUser(registerRequest, OnRegisterRequestSuccess, OnRegisterFailure);
