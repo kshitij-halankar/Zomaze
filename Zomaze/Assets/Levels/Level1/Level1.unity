@@ -2131,7 +2131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b783f3a3de1759340b389413a0be7db1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  calculateScore: {fileID: 638485047}
+  calculateScore: {fileID: 1995976961}
   exitDistance1: 5
   exitDistance2: 8.8
   speed: 1
