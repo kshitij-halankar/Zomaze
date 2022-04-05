@@ -164,4 +164,8 @@ public class LoginScript : MonoBehaviour
             i++;
         }
     }
+
+    public void LeaderboardBack() {
+        SceneManager.LoadScene("MainMenu");
+    }
 }
