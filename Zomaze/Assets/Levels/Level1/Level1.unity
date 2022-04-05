@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.093921326, g: 0.11918657, b: 0.15502876, a: 1}
+  m_IndirectSpecularColor: {r: 0.0939183, g: 0.11918291, b: 0.15502581, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 82b4083d40be952488c8996e798537d7, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -3049,7 +3049,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430818615}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.73, y: 1.269, z: 30.4}
+  m_LocalPosition: {x: 20, y: 1.269, z: 18.42}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4236,7 +4236,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -126, y: -52}
+  m_AnchoredPosition: {x: 412.75006, y: 215.75}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &638485047
@@ -6025,7 +6025,7 @@ MonoBehaviour:
   center: {x: 22, y: 0, z: 20.5}
   size: {x: 22, y: 1, z: 21.5}
   spawnCollisionRadiusCheck: 0.25
-  calculateScore: {fileID: 0}
+  calculateScore: {fileID: 638485047}
 --- !u!4 &979502978
 Transform:
   m_ObjectHideFlags: 0
@@ -6727,7 +6727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d8a83d606a754f11b76a3b0d16c2ed9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorEvent: {fileID: 1321199655}
+  doorEvent: {fileID: 979502980}
 --- !u!1001 &1093919838
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10746,7 +10746,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -10833,7 +10833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverScreen: {fileID: 1743100924}
-  startingTime: 0
+  startingTime: 150
   gameTime: {fileID: 21492776}
 --- !u!1 &2011907049
 GameObject:
