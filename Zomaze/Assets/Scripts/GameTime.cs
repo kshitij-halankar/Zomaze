@@ -15,6 +15,8 @@ public class GameTime : MonoBehaviour
     private TimeSpan timePlaying;
     [SerializeField] TextMeshProUGUI gameTime;
     bool isGameOver = false;
+    [SerializeField] CalculateScore score;
+
 
     // Start is called before the first frame update
     void Start()
@@ -53,7 +55,7 @@ public class GameTime : MonoBehaviour
     {
         Scene currentScene = SceneManager.GetActiveScene();
         //SceneManager.LoadScene(gameOverScene);
-        GameOverScreen.Setup(10, currentScene.name);
+        GameOverScreen.SetupGameOver(score.getScore(), currentScene.name);
     }
 
     public float getCurrentTime(){

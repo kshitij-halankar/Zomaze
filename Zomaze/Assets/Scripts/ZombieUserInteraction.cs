@@ -29,14 +29,14 @@ public class ZombieUserInteraction : MonoBehaviour
             if(Math.Abs(playerPosition.x - zombiePosition.x) < 4 && Math.Abs(playerPosition.z - zombiePosition.z) < 4){
                 Scene currentScene = SceneManager.GetActiveScene();
                 //SceneManager.LoadScene(gameOverScene);
-                GameOverScreen.Setup(score.getScore(), currentScene.name);
+                GameOverScreen.SetupGameOver(score.getScore(), currentScene.name);
             }
             }
         else{
             if(Math.Abs(playerPosition.z - zombiePosition.z) < 1 && Math.Abs(playerPosition.x - zombiePosition.x) < 1){
                 Scene currentScene = SceneManager.GetActiveScene();
                 //SceneManager.LoadScene(gameOverScene);
-                GameOverScreen.Setup(score.getScore(), currentScene.name);
+                GameOverScreen.SetupGameOver(score.getScore(), currentScene.name);
             }
         }
     }

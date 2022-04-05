@@ -40,11 +40,10 @@ public class PlayerController : MonoBehaviour
 
         if (transform.position.z >= exitDistance1 && transform.position.z <= exitDistance2)
         {
-            //calculateScore.mazeExited();
+            calculateScore.mazeExited();
+            Scene currentScene = SceneManager.GetActiveScene();
+            GameOverScreen.SetupGameExit(calculateScore.getScore(), currentScene.name);
             enabled = false;
-            SceneManager.LoadScene("GameExit");
-            //gameEnd.Setup
-            gameEnd.Setup(calculateScore.getScore());
 
         }
 

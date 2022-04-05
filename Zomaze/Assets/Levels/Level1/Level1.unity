@@ -9091,6 +9091,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingTime: 100
   gameTime: {fileID: 21492776}
+  score: {fileID: 1995976961}
 --- !u!1 &2011907049
 GameObject:
   m_ObjectHideFlags: 0

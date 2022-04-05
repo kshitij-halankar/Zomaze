@@ -16,12 +16,20 @@ public class GameOverScreen : MonoBehaviour
         instance = this;
         // DontDestroyOnLoad(this.gameObject);
     }
-    public static void Setup(int score, string scene)
+    public static void SetupGameOver(int score, string scene)
     {
         finalScore = score;
         currentScene = scene;
         //gameObject.SetActive(true);
         SceneManager.LoadScene("GameOver");
+    }
+
+     public static void SetupGameExit(int score, string scene)
+    {
+        finalScore = score;
+        currentScene = scene;
+        //gameObject.SetActive(true);
+        SceneManager.LoadScene("GameExit");
     }
 
     public void RestartButton()
