@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class GameTime : MonoBehaviour
 {
-    [SerializeField] GameOverScreen gameOverScreen;
+    //[SerializeField] GameOverScreen gameOverScreen;
     int maxPlatform  = 0;
     private float currentTime = 0f;
     [SerializeField] private float startingTime;
@@ -53,7 +53,7 @@ public class GameTime : MonoBehaviour
     {
         Scene currentScene = SceneManager.GetActiveScene();
         //SceneManager.LoadScene(gameOverScene);
-        gameOverScreen.Setup(10, currentScene.name);
+        GameOverScreen.Setup(10, currentScene.name);
     }
 
     public float getCurrentTime(){

@@ -26,12 +26,16 @@ public class ZombieUserInteraction : MonoBehaviour
         Vector3 playerPosition = GameObject.Find("Player").transform.position;
          if (Vector3.Angle(GameObject.Find(zombieName).transform.forward, playerPosition - zombiePosition) < 15){
             if(Math.Abs(playerPosition.x - zombiePosition.x) < 4 && Math.Abs(playerPosition.z - zombiePosition.z) < 4){
-                    SceneManager.LoadScene("Level1");
-                }
+                Scene currentScene = SceneManager.GetActiveScene();
+                //SceneManager.LoadScene(gameOverScene);
+                GameOverScreen.Setup(10, currentScene.name);
+            }
             }
         else{
             if(Math.Abs(playerPosition.z - zombiePosition.z) < 1 && Math.Abs(playerPosition.x - zombiePosition.x) < 1){
-                    SceneManager.LoadScene("Level1");
+                Scene currentScene = SceneManager.GetActiveScene();
+                //SceneManager.LoadScene(gameOverScene);
+                GameOverScreen.Setup(10, currentScene.name);
             }
         }
     }

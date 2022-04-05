@@ -14,7 +14,8 @@ public class DoorEvent : MonoBehaviour
 	public event System.Action<Collider> OnDoorExitTrigger; 
 	public event System.Action<bool> ToggleUpdate;
 
-	private void Update()
+
+    private void Update()
 	{
 	
 	}  

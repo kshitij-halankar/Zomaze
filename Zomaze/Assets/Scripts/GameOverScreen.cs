@@ -7,9 +7,16 @@ using UnityEngine.SceneManagement;
 
 public class GameOverScreen : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI scoreText;
-    private string currentScene;
-    public void Setup(int score, string scene)
+    private static TextMeshProUGUI scoreText;
+    private static string currentScene;
+    public static GameOverScreen instance;
+
+    public void Awake()
+    {
+        instance = this;
+        // DontDestroyOnLoad(this.gameObject);
+    }
+    public static void Setup(int score, string scene)
     {
         currentScene = scene;
         //gameObject.SetActive(true);
@@ -23,6 +30,6 @@ public class GameOverScreen : MonoBehaviour
     }
     public void MainMenuButton()
     {
-        SceneManager.LoadScene("StartMenu");
+        SceneManager.LoadScene("MainMenu");
     }
 }
