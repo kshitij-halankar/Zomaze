@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/SignupPage.unity
+    guid: cd7210b5c718d464a88ec63618296750
+  - enabled: 1
+    path: Assets/MainMenu/MainMenu.unity
+    guid: 320342be46b014e3399aee7ba1521447
+  - enabled: 1
+    path: Assets/Scenes/LevelSelector.unity
+    guid: 06a8d5c1f0df00c469645d2ee982b85d
+  - enabled: 1
+    path: Assets/Scenes/LeaderBoard.unity
+    guid: dff8f7eb03abc4eb6b2c2f142c7831ca
+  - enabled: 1
+    path: Assets/MainMenu/Help.unity
+    guid: 8a9e4def3020d4d23bb8b2fe8301dd05
+  - enabled: 1
+    path: Assets/MainMenu/About.unity
+    guid: bbcaa9ad4948c4303bef3f7ef0ba2942
+  - enabled: 1
+    path: Assets/Levels/Level1/Level1.unity
+    guid: f765b29938e904813b3a6455255ce818
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 5840a88c10803514eb6f2ce91148b3cb
+  - enabled: 1
+    path: Assets/Scenes/LoginPage.unity
+    guid: a4588564a38ec475c9779e2798b1b2ec
+  - enabled: 1
+    path: Assets/Scenes/GameExit.unity
+    guid: 8b9f91d3bda95439b8c976e6664e3c23
+  - enabled: 1
+    path: Assets/Levels/Level2/Level2.unity
+    guid: 56d75a2ae50874e7cace2774a69cbb04
+  - enabled: 1
+    path: Assets/Levels/Level3/Level3.unity
+    guid: 5fe667544c4ae5549a7c414ad57d6905
+  - enabled: 1
+    path: Assets/Levels/Level4/MazeLevel4.unity
+    guid: 51ecd20fb51d1454f9be9e7bcc290bba
+  - enabled: 1
+    path: Assets/Levels/Level5/Level5.unity
+    guid: 769f5a144cf16c44592a1b015afdee02
+  m_configObjects: {}
