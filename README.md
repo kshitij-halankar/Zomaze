@@ -33,3 +33,4 @@ The project is currently not deployed. For mobile play, Unity must be installed 
 - [@DeepanshuShah19](https://github.com/DeepanshuShah19)
 - [@urvashiben](https://github.com/urvashiben)
 - [@Husainu](https://github.com/Husainu)
+- [@DakshajaReddy](https://github.com/DakshajaReddy)
