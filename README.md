@@ -13,12 +13,10 @@ Zomaze is a VR game set in an infested maze world and will interact with you thr
 
 ## Screenshots
 
-![] (screenshots/Pic1.png)
-![] (screenshots/Pic2.jpg)
-![] (screenshots/Pic3.jpg)
-![] (screenshots/Pic4.jpg)
-
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![](screenshots/Pic1.png)
+![](screenshots/Pic2.jpg)
+![](screenshots/Pic3.jpg)
+![](screenshots/Pic4.jpg)
 
 ## Installation
 
